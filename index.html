@@ -25,11 +25,11 @@
             background: var(--white); padding: 0 5%;
             display: flex; justify-content: space-between; align-items: center;
             position: fixed; width: 100%; top: 0; z-index: 1000;
-            height: 70px;
+            height: 75px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-bottom: 3px solid var(--mg-red);
+            border-bottom: 4px solid var(--mg-red);
         }
-        .brand { font-family: 'Montserrat', sans-serif; color: var(--mg-red); font-size: 1.4rem; font-weight: 800; text-decoration: none; }
+        .brand { font-family: 'Montserrat', sans-serif; color: var(--mg-red); font-size: 1.5rem; font-weight: 800; text-decoration: none; }
         
         .nav-links { display: flex; list-style: none; gap: 25px; }
         .nav-links a { text-decoration: none; color: var(--mg-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; text-transform: uppercase; }
@@ -39,35 +39,37 @@
 
         /* --- Hero Section --- */
         .hero {
-            min-height: 85vh;
+            height: 90vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center;
-            text-align: center; color: white; padding: 100px 5% 40px;
+            text-align: center; color: white; padding: 80px 5% 0;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 15px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 20px; }
         .hero span { color: var(--mg-red); }
-        .hero p { font-size: clamp(0.9rem, 4vw, 1.2rem); max-width: 800px; margin: 0 auto 25px; }
+        .hero p { font-size: clamp(1rem, 4vw, 1.2rem); }
 
-        /* --- About Section --- */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        /* --- About Section (Original Content) --- */
+        .section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 
         .slideshow-container {
-            position: relative; width: 100%; aspect-ratio: 1/1; max-width: 450px;
-            overflow: hidden; border: 6px solid #f4f4f4; box-shadow: 12px 12px 0px var(--mg-red); border-radius: 8px; margin: 0 auto;
+            position: relative; width: 100%; aspect-ratio: 1/1; max-width: 500px; 
+            overflow: hidden; border: 10px solid #f4f4f4; box-shadow: 15px 15px 0px var(--mg-red); border-radius: 8px; margin: 0 auto;
         }
         .mySlides { width: 100%; height: 100%; }
         .mySlides img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        .about-content h2 { font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 20px; border-left: 6px solid var(--mg-red); padding-left: 15px; }
-        .about-list { margin-top: 20px; list-style: none; }
-        .about-list li { margin-bottom: 12px; display: flex; align-items: center; font-weight: 600; font-size: 0.95rem; }
+        .about-text h2 { font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 20px; border-left: 6px solid var(--mg-red); padding-left: 20px; text-transform: uppercase; font-weight: 800; }
+        .about-text p { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .about-list { margin-top: 25px; list-style: none; }
+        .about-list li { margin-bottom: 15px; font-size: 1rem; display: flex; align-items: center; }
         .about-list li i { color: var(--mg-red); margin-right: 12px; }
 
-        /* --- Team Section (TESTIMONIAL CONTENT) --- */
-        .team-section { background: var(--grey-bg); padding: 80px 5%; text-align: center; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
+        /* --- Team Section (FULL ORIGINAL CONTENT) --- */
+        .team-section { background: var(--grey-bg); padding: 100px 5%; text-align: center; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 50px; }
         
         .team-card {
             background: white; padding: 30px 15px; border-radius: 12px;
@@ -85,31 +87,37 @@
         /* --- Specs Table --- */
         .specs-area { background: var(--mg-dark); color: white; padding: 80px 5%; }
         .table-wrap { overflow-x: auto; margin-top: 30px; -webkit-overflow-scrolling: touch; }
-        table { width: 100%; border-collapse: collapse; min-width: 500px; }
-        th { background: var(--mg-red); padding: 15px; text-align: left; }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th { background: var(--mg-red); color: white; padding: 15px; text-align: left; }
         td { padding: 15px; border-bottom: 1px solid #333; }
 
         /* --- Footer --- */
-        .main-footer { background: #0a0a0a; color: #ffffff; padding: 60px 5% 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h4 { color: var(--mg-red); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
-        .footer-col p, .footer-col ul li a { color: #bbb; font-size: 0.85rem; text-decoration: none; line-height: 1.8; }
-        .footer-bottom { border-top: 1px solid #222; padding-top: 20px; text-align: center; font-size: 0.8rem; color: #666; }
+        .main-footer { background: #0a0a0a; color: #ffffff; padding: 80px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .footer-col h4 { font-family: 'Montserrat'; color: var(--mg-red); font-size: 1.2rem; margin-bottom: 25px; text-transform: uppercase; }
+        .footer-col p { color: #bbb; line-height: 1.8; margin-bottom: 15px; font-size: 0.9rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: #bbb; text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-col ul li a:hover { color: var(--mg-red); padding-left: 5px; }
+        
+        .footer-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; color: #666; font-size: 0.85rem; }
 
-        /* --- Mobile Responsiveness --- */
+        /* --- Mobile Responsive Fixes --- */
         @media (max-width: 850px) {
             .nav-links {
-                position: absolute; top: 70px; left: -100%; width: 100%; background: white;
-                flex-direction: column; text-align: center; padding: 20px 0;
+                position: absolute; top: 75px; left: -100%; width: 100%; background: white;
+                flex-direction: column; text-align: center; padding: 30px 0;
                 transition: 0.4s; box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
             .nav-links.active { left: 0; }
             .menu-toggle { display: block; }
             
-            .grid-2 { grid-template-columns: 1fr; text-align: center; padding: 50px 5%; }
-            .about-content h2 { border-left: none; border-bottom: 4px solid var(--mg-red); display: inline-block; padding: 0 0 10px 0; }
+            .grid-2 { grid-template-columns: 1fr; text-align: center; }
+            .about-text h2 { border-left: none; border-bottom: 4px solid var(--mg-red); display: inline-block; padding: 0 0 10px 0; }
             .about-list li { justify-content: center; }
-            .slideshow-container { max-width: 320px; box-shadow: 8px 8px 0px var(--mg-red); }
+            .slideshow-container { max-width: 350px; box-shadow: 10px 10px 0px var(--mg-red); }
+            .footer-bottom { justify-content: center; text-align: center; }
         }
 
         .fade { animation: fadeEffect 1.5s; }
@@ -122,7 +130,7 @@
         <a href="#" class="brand">MGCHEMICALS</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#specs">Specifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -134,28 +142,30 @@
     <header class="hero">
         <div data-aos="zoom-in">
             <h1>TECHNICAL GRADE <span>UREA</span></h1>
-            <p>Direct Importers & Reliable Traders. High Purity Solutions for All India Delivery.</p>
-            <a href="#specs" style="background:var(--mg-red); color:white; padding:12px 25px; text-decoration:none; font-weight:bold; border-radius:5px; display:inline-block;">Lab Report</a>
+            <p style="font-size: 1.2rem;">Innovating Chemical Solutions | Direct Importers</p>
+            <br>
+            <a href="#specs" style="background:var(--mg-red); color:white; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:5px; display:inline-block;">Check Lab Report</a>
         </div>
     </header>
 
-    <section class="grid-2" id="about">
-        <div class="slideshow-container" data-aos="fade-up">
+    <section class="section grid-2" id="about">
+        <div class="slideshow-container" data-aos="fade-right">
             <div class="mySlides fade"><img src="pic1.jpeg"></div>
             <div class="mySlides fade"><img src="pic2.jpeg"></div>
-            <div style="position: absolute; bottom: 10px; width: 100%; text-align: center;">
-                <span class="dot" style="height: 8px; width: 8px; margin: 0 4px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
-                <span class="dot" style="height: 8px; width: 8px; margin: 0 4px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
+            <div style="position: absolute; bottom: 15px; width: 100%; text-align: center;">
+                <span class="dot" style="height: 10px; width: 10px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
+                <span class="dot" style="height: 10px; width: 10px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
             </div>
         </div>
 
-        <div class="about-content" data-aos="fade-up">
+        <div class="about-text" data-aos="fade-left">
             <h2>ABOUT MGCHEMICALS</h2>
-            <p>Established in 2017, we are leading direct importers of premium industrial chemicals. We ensure the highest standards of Quality and Compliance for laboratory and industrial use.</p>
+            <p>Established in 2017, we are direct importers and traders of premium chemicals. Our focus is on <b>Quality, Compliance, and Innovation.</b> We ensure the highest standards for industrial and laboratory use.</p>
             <ul class="about-list">
-                <li><i class="fas fa-check-circle"></i> Direct Importer Pricing</li>
-                <li><i class="fas fa-check-circle"></i> Pan India Logistics</li>
-                <li><i class="fas fa-check-circle"></i> ISO Standard Products</li>
+                <li><i class="fas fa-check-circle"></i> Established: 2017</li>
+                <li><i class="fas fa-check-circle"></i> Crystal Clear Quality</li>
+                <li><i class="fas fa-check-circle"></i> All India Delivery</li>
+                <li><i class="fas fa-check-circle"></i> Haryana | Punjab | Karnataka</li>
             </ul>
         </div>
     </section>
@@ -194,62 +204,82 @@
     </section>
 
     <section class="specs-area" id="specs">
-        <div style="max-width:1200px; margin:0 auto;">
-            <h2 style="text-align:center; font-family:'Montserrat';">TECHNICAL SPECS (N46)</h2>
-            
-
-[Image of urea chemical structure]
-
-            <div class="table-wrap" data-aos="fade-up">
-                <table>
-                    <thead><tr><th>Parameter</th><th>Value</th><th>Method</th></tr></thead>
-                    <tbody>
-                        <tr><td>Nitrogen</td><td>46% Min</td><td>ISO 5315</td></tr>
-                        <tr><td>Moisture</td><td>0.5% Max</td><td>ISO 2753</td></tr>
-                        <tr><td>Biuret</td><td>1.00% Max</td><td>ISO 2754</td></tr>
-                        <tr><td>Iron (Fe)</td><td>1.00 PPM Max</td><td>ISO 22241</td></tr>
-                        <tr><td>Melting Pt</td><td>132°C</td><td>ISO 2759</td></tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2 style="text-align:center; font-family:'Montserrat'; margin-bottom: 30px;">TECHNICAL SPECIFICATIONS (N46)</h2>
+        <div class="table-wrap" data-aos="fade-up">
+            <table>
+                <thead>
+                    <tr><th>Parameter</th><th>Value</th><th>Test Method</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nitrogen Content</td><td>46% Min</td><td>ISO 5315</td></tr>
+                    <tr><td>Moisture</td><td>0.5% Max</td><td>ISO 2753</td></tr>
+                    <tr><td>Biuret Content</td><td>1.00% Max</td><td>ISO 2754</td></tr>
+                    <tr><td>Iron (Fe)</td><td>1.00 PPM Max</td><td>ISO 22241</td></tr>
+                    <tr><td>Melting Point</td><td>132°C</td><td>ISO 2759</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <footer class="main-footer" id="contact">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4 style="color:white">MG<span style="color:var(--mg-red)">CHEMICALS</span></h4>
-                <p>Industrial chemical excellence since 2017.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Email: mgchemicals98@gmail.com</p>
-                <p>PH: +91-9253464520</p>
-            </div>
-            <div class="footer-col">
-                <h4>Socials</h4>
-                <div style="display:flex; gap:15px; font-size:1.2rem;">
-                    <i class="fab fa-facebook-f"></i> <i class="fab fa-linkedin-in"></i> <i class="fab fa-instagram"></i>
+                <h4 style="color: white; font-weight: 800;">MG<span style="color: var(--mg-red);">CHEMICALS</span></h4>
+                <p>Leading direct importers and traders of industrial chemicals since 2017. We bridge the gap between quality manufacturing and industrial requirements across Pan India.</p>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="#" style="color:white; font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color:white; font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" style="color:white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#specs">Lab Reports</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt" style="color: var(--mg-red); margin-right: 10px;"></i> Hansi-Chandigarh Highway, Hansi, Haryana - 125033</p>
+                <p><i class="fas fa-envelope" style="color: var(--mg-red); margin-right: 10px;"></i> mgchemicals98@gmail.com</p>
+                <p><i class="fas fa-phone-alt" style="color: var(--mg-red); margin-right: 10px;"></i> +91-9253464520</p>
+            </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 MGCHEMICALS. All Rights Reserved.</div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MGCHEMICALS. All Rights Reserved. Designed for Excellence.</p>
+            <div style="display: flex; gap: 20px; font-size: 1.2rem; color: var(--mg-red);">
+                <i class="fas fa-shield-alt" title="Quality Guaranteed"></i>
+                <i class="fas fa-truck" title="Pan India Delivery"></i>
+                <i class="fas fa-flask" title="ISO Tested"></i>
+            </div>
+        </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
-        function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+        AOS.init({ duration: 1000, once: true });
+        
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
 
         let slideIndex = 0;
         showSlides();
         function showSlides() {
+            let i;
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
-            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
-            for (let i = 0; i < dots.length; i++) { dots[i].style.backgroundColor = "#bbb"; }
+            for (i = 0; i < dots.length; i++) { dots[i].style.backgroundColor = "#bbb"; }
             if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";
             if(dots[slideIndex-1]) dots[slideIndex-1].style.backgroundColor = "#B22222";
             setTimeout(showSlides, 3000);
