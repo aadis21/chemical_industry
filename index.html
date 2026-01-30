@@ -51,7 +51,7 @@
         .hero span { color: var(--mg-red); }
         .hero p { font-size: clamp(0.95rem, 4vw, 1.25rem); max-width: 800px; margin: 0 auto 25px; line-height: 1.4; }
 
-        /* --- About Section (Fixed Image Fatna) --- */
+        /* --- About Section --- */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
 
         .slideshow-container {
@@ -85,6 +85,17 @@
         th { background: var(--mg-red); padding: 18px; text-align: left; text-transform: uppercase; font-size: 0.9rem; }
         td { padding: 18px; border-bottom: 1px solid #333; font-size: 0.95rem; }
 
+        /* --- NEW CONTACT FORM SECTION --- */
+        .contact-form-section { padding: 80px 5%; background: #fff; }
+        .form-container { max-width: 700px; margin: 0 auto; background: var(--grey-bg); padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .form-container h2 { text-align: center; font-family: 'Montserrat'; margin-bottom: 30px; text-transform: uppercase; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; outline: none; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--mg-red); }
+        .submit-btn { width: 100%; background: var(--mg-red); color: white; padding: 15px; border: none; border-radius: 5px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        .submit-btn:hover { background: #8B0000; letter-spacing: 1px; }
+
         /* --- Professional Footer --- */
         .main-footer { background: #0a0a0a; color: #ffffff; padding: 70px 5% 20px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
@@ -109,6 +120,7 @@
             .about-content h2 { border-left: none; border-bottom: 5px solid var(--mg-red); display: inline-block; padding: 0 0 12px 0; }
             .about-list li { justify-content: center; }
             .slideshow-container { max-width: 320px; box-shadow: 10px 10px 0px var(--mg-red); }
+            .form-container { padding: 25px; }
         }
 
         .fade { animation: fadeEffect 1.5s; }
@@ -167,8 +179,6 @@
         </div>
         <div class="team-grid">
             <div class="team-card"><img src="testi3.jpeg" class="team-img"><h3>Vishal Grewal</h3><span>Managing Director </span><p>The Managing Director leads MG Chemicals’ overall strategy, operations, and business growth. They drive key decisions, build strong stakeholder relationships, and ensure ethical, quality-driven expansion.</p></div>
-            
-           
             <div class="team-card"><img src="testi2.jpeg" class="team-img"><h3>Anand Sindhu</h3><span>Director </span><p>The Director supports MG Chemicals’ strategic planning, governance, and operational oversight. They ensure compliance, risk management, and sustainable growth in coordination with senior leadership.</p></div>
              <div class="team-card"><img src="testi1.jpeg" class="team-img"><h3>Suraj Kasera</h3><span>CA</span><p>Our Chartered Accountant manages accounting, taxation, audits, and statutory compliance, ensuring full adherence to Indian laws. They support financial planning, reporting, and regulatory coordination to maintain transparency and sustainable growth.</p></div>
             <div class="team-card"><img src="testi4.jpeg" class="team-img"><h3>Ravi Kant Sharma</h3><span>Legal Professional</span><p>Our Legal Professional ensures legal compliance, manages contracts, statutory documentation, and mitigates legal risks to safeguard the company’s interests and support smooth business operations.</p></div>
@@ -194,7 +204,32 @@
         </div>
     </section>
 
-    <footer class="main-footer" id="contact">
+    <section class="contact-form-section" id="contact">
+        <div class="form-container" data-aos="fade-up">
+            <h2>Get In <span style="color:var(--mg-red)">Touch</span></h2>
+            <form action="https://formspree.io/f/xkobqbql" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
         <div class="footer-grid">
             <div class="footer-col">
                 <h4 style="color: white; font-weight: 800;">MG<span style="color: var(--mg-red);">CHEMICALS</span></h4>
