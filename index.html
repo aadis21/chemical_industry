@@ -85,7 +85,7 @@
         th { background: var(--mg-red); padding: 18px; text-align: left; text-transform: uppercase; font-size: 0.9rem; }
         td { padding: 18px; border-bottom: 1px solid #333; font-size: 0.95rem; }
 
-        /* --- CONTACT FORM SECTION --- */
+        /* --- NEW CONTACT FORM SECTION --- */
         .contact-form-section { padding: 80px 5%; background: #fff; }
         .form-container { max-width: 700px; margin: 0 auto; background: var(--grey-bg); padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .form-container h2 { text-align: center; font-family: 'Montserrat'; margin-bottom: 30px; text-transform: uppercase; }
@@ -96,15 +96,8 @@
         .submit-btn { width: 100%; background: var(--mg-red); color: white; padding: 15px; border: none; border-radius: 5px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
         .submit-btn:hover { background: #8B0000; letter-spacing: 1px; }
 
-        /* Success Message Styling */
-        #form-status {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
-            text-align: center;
-            font-weight: 600;
-        }
+        /* Success Message Styling (Responsive) */
+        #form-status { margin-top: 15px; padding: 12px; border-radius: 5px; text-align: center; font-weight: 600; display: none; font-size: 0.9rem; }
         #form-status.success { display: block; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         #form-status.error { display: block; background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
 
@@ -118,15 +111,21 @@
         .footer-col ul li a:hover { color: var(--mg-red); padding-left: 5px; }
         .footer-bottom { border-top: 1px solid #222; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #666; }
 
+        /* --- Mobile Optimization Fixes --- */
         @media (max-width: 850px) {
-            .nav-links { position: absolute; top: 70px; left: -100%; width: 100%; background: white; flex-direction: column; text-align: center; padding: 30px 0; transition: 0.4s ease-in-out; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+            .nav-links {
+                position: absolute; top: 70px; left: -100%; width: 100%; background: white;
+                flex-direction: column; text-align: center; padding: 30px 0;
+                transition: 0.4s ease-in-out; box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
             .nav-links.active { left: 0; }
             .menu-toggle { display: block; }
+            
             .grid-2 { grid-template-columns: 1fr; text-align: center; padding: 60px 5%; }
             .about-content h2 { border-left: none; border-bottom: 5px solid var(--mg-red); display: inline-block; padding: 0 0 12px 0; }
             .about-list li { justify-content: center; }
             .slideshow-container { max-width: 320px; box-shadow: 10px 10px 0px var(--mg-red); }
-            .form-container { padding: 25px; }
+            .form-container { padding: 25px; width: 95%; }
         }
 
         .fade { animation: fadeEffect 1.5s; }
@@ -184,16 +183,17 @@
             <p style="margin-top:10px;">The expertise driving excellence at MG CHEMICALS.</p>
         </div>
         <div class="team-grid">
-            <div class="team-card"><img src="testi3.jpeg" class="team-img"><h3>Vishal Grewal</h3><span>Managing Director </span><p>The Managing Director leads MG Chemicals’ overall strategy, operations, and business growth.</p></div>
-            <div class="team-card"><img src="testi2.jpeg" class="team-img"><h3>Anand Sindhu</h3><span>Director </span><p>The Director supports MG Chemicals’ strategic planning, governance, and operational oversight.</p></div>
-             <div class="team-card"><img src="testi1.jpeg" class="team-img"><h3>Suraj Kasera</h3><span>CA</span><p>Our Chartered Accountant manages accounting, taxation, and statutory compliance.</p></div>
-            <div class="team-card"><img src="testi4.jpeg" class="team-img"><h3>Ravi Kant Sharma</h3><span>Legal Professional</span><p>Our Legal Professional ensures legal compliance and manages contracts.</p></div>
+            <div class="team-card"><img src="testi3.jpeg" class="team-img"><h3>Vishal Grewal</h3><span>Managing Director </span><p>The Managing Director leads MG Chemicals’ overall strategy, operations, and business growth. They drive key decisions, build strong stakeholder relationships, and ensure ethical, quality-driven expansion.</p></div>
+            <div class="team-card"><img src="testi2.jpeg" class="team-img"><h3>Anand Sindhu</h3><span>Director </span><p>The Director supports MG Chemicals’ strategic planning, governance, and operational oversight. They ensure compliance, risk management, and sustainable growth in coordination with senior leadership.</p></div>
+             <div class="team-card"><img src="testi1.jpeg" class="team-img"><h3>Suraj Kasera</h3><span>CA</span><p>Our Chartered Accountant manages accounting, taxation, audits, and statutory compliance, ensuring full adherence to Indian laws. They support financial planning, reporting, and regulatory coordination to maintain transparency and sustainable growth.</p></div>
+            <div class="team-card"><img src="testi4.jpeg" class="team-img"><h3>Ravi Kant Sharma</h3><span>Legal Professional</span><p>Our Legal Professional ensures legal compliance, manages contracts, statutory documentation, and mitigates legal risks to safeguard the company’s interests and support smooth business operations.</p></div>
         </div>
     </section>
 
     <section class="specs-area" id="specs">
         <div style="max-width:1200px; margin:0 auto;">
             <h2 style="text-align:center; font-family:'Montserrat'; margin-bottom: 40px;">TECHNICAL SPECIFICATIONS (N46)</h2>
+            
             <div class="table-wrap" data-aos="fade-up">
                 <table>
                     <thead><tr><th>Parameter</th><th>Value</th><th>Test Method</th></tr></thead>
@@ -212,7 +212,7 @@
     <section class="contact-form-section" id="contact">
         <div class="form-container" data-aos="fade-up">
             <h2>Get In <span style="color:var(--mg-red)">Touch</span></h2>
-            <form id="mg-contact-form" action="https://formspree.io/f/xkobqbql" method="POST">
+            <form id="contact-form" action="https://formspree.io/f/xkobqbql" method="POST">
                 <div class="form-group">
                     <label>Full Name</label>
                     <input type="text" name="name" placeholder="Enter your name" required>
@@ -239,7 +239,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4 style="color: white; font-weight: 800;">MG<span style="color: var(--mg-red);">CHEMICALS</span></h4>
-                <p>Direct importers and traders of premium chemicals since 2017.</p>
+                <p>Direct importers and traders of premium chemicals since 2017. Committed to quality, compliance, and innovation.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -256,24 +256,26 @@
                 <p><i class="fas fa-map-marker-alt" style="color:var(--mg-red); margin-right:10px;"></i> Hansi-Chandigarh Highway, Haryana</p>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 MG CHEMICALS. All Rights Reserved.</div>
+        <div class="footer-bottom">&copy; 2026 MG CHEMICALS. All Rights Reserved. Designed for Excellence.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
 
+        // Mobile Menu Logic
         function toggleMenu() {
             document.getElementById("navLinks").classList.toggle("active");
         }
 
+        // Close menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById("navLinks").classList.remove("active");
             });
         });
 
-        // Slideshow
+        // Slideshow Logic
         let slideIndex = 0;
         showSlides();
         function showSlides() {
@@ -289,51 +291,39 @@
             setTimeout(showSlides, 3000);
         }
 
-        // --- AJAX FORM SUBMISSION LOGIC ---
-        var form = document.getElementById("mg-contact-form");
-        
-        async function handleSubmit(event) {
-          event.preventDefault();
-          var status = document.getElementById("form-status");
-          var btn = document.getElementById("submit-btn");
-          var data = new FormData(event.target);
-          
-          btn.innerHTML = "Sending...";
-          btn.disabled = true;
+        // --- Form Submission Without Redirect ---
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+        const btn = document.getElementById("submit-btn");
 
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-          }).then(response => {
-            if (response.ok) {
-              status.innerHTML = "Thanks! Your message has been sent successfully.";
-              status.className = "success";
-              form.reset();
-              btn.innerHTML = "Send Message";
-              btn.disabled = false;
-            } else {
-              response.json().then(data => {
-                if (Object.hasOwn(data, 'errors')) {
-                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Success! Your message has been sent.";
+                    status.className = "success";
+                    form.reset();
                 } else {
-                  status.innerHTML = "Oops! There was a problem submitting your form";
+                    status.innerHTML = "Oops! There was a problem.";
+                    status.className = "error";
                 }
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+            }).catch(error => {
+                status.innerHTML = "Connection Error!";
                 status.className = "error";
                 btn.innerHTML = "Send Message";
                 btn.disabled = false;
-              })
-            }
-          }).catch(error => {
-            status.innerHTML = "Oops! Connection error.";
-            status.className = "error";
-            btn.innerHTML = "Send Message";
-            btn.disabled = false;
-          });
-        }
-        form.addEventListener("submit", handleSubmit)
+            });
+        });
     </script>
 </body>
 </html>
