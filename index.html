@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MG CHEMICALS | Premium Technical Grade Urea N46</title>
+    <title>MG CHEMICALS | Technical Grade Urea N46</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,112 +14,105 @@
             --mg-red: #B22222; 
             --mg-dark: #121212;
             --white: #ffffff;
-            --grey-bg: #f8f9fa;
+            --grey-bg: #f4f4f4;
         }
 
+        /* Basic Resets */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: var(--white); color: var(--mg-dark); scroll-behavior: smooth; overflow-x: hidden; width: 100%; -webkit-font-smoothing: antialiased; }
+        body { background: var(--white); color: var(--mg-dark); scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
-        /* --- Navigation --- */
+        /* --- Professional Navigation --- */
         nav {
             background: var(--white); padding: 0 5%;
             display: flex; justify-content: space-between; align-items: center;
             position: fixed; width: 100%; top: 0; z-index: 1000;
-            height: 70px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 70px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--mg-red);
         }
         .brand { font-family: 'Montserrat', sans-serif; color: var(--mg-red); font-size: 1.4rem; font-weight: 800; text-decoration: none; }
+        
         .nav-links { display: flex; list-style: none; gap: 25px; }
         .nav-links a { text-decoration: none; color: var(--mg-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; text-transform: uppercase; }
         .nav-links a:hover { color: var(--mg-red); }
+
         .menu-toggle { display: none; font-size: 1.5rem; color: var(--mg-dark); cursor: pointer; }
 
         /* --- Hero Section --- */
         .hero {
-            min-height: 90vh;
+            min-height: 85vh;
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center;
-            text-align: center; color: white; padding: 80px 5%;
+            text-align: center; color: white; padding: 100px 5% 40px;
         }
-        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 15px; line-height: 1.1; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.2rem, 8vw, 4rem); margin-bottom: 15px; }
         .hero span { color: var(--mg-red); }
-        .hero p { font-size: clamp(0.9rem, 4vw, 1.2rem); max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
+        .hero p { font-size: clamp(0.95rem, 4vw, 1.25rem); max-width: 800px; margin: 0 auto 25px; line-height: 1.4; }
 
-        /* --- Sections Common --- */
-        section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 40px; text-transform: uppercase; }
+        /* --- About Section (Fixed Image Fatna) --- */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
 
-        /* --- About Section --- */
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .slideshow-container {
-            position: relative; width: 100%; aspect-ratio: 1/1; 
-            overflow: hidden; border: 5px solid #fff; box-shadow: 10px 10px 0px var(--mg-red); border-radius: 8px;
+            position: relative; width: 100%; aspect-ratio: 1/1; max-width: 450px;
+            overflow: hidden; border: 8px solid #f4f4f4; box-shadow: 12px 12px 0px var(--mg-red); border-radius: 8px; margin: 0 auto;
         }
+        .mySlides { width: 100%; height: 100%; }
         .mySlides img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .about-content h2 { border-left: 6px solid var(--mg-red); padding-left: 15px; margin-bottom: 20px; font-family: 'Montserrat'; }
-        .about-list { margin-top: 25px; list-style: none; }
-        .about-list li { margin-bottom: 12px; display: flex; align-items: center; font-weight: 600; font-size: 0.95rem; }
-        .about-list li i { color: var(--mg-red); margin-right: 12px; }
 
-        /* --- Team Grid --- */
-        .team-section { background: var(--grey-bg); max-width: 100%; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 20px; }
+        .about-content h2 { font-family: 'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 20px; border-left: 6px solid var(--mg-red); padding-left: 15px; text-transform: uppercase; }
+        .about-content p { font-size: 1rem; line-height: 1.8; color: #444; }
+        .about-list { margin-top: 25px; list-style: none; }
+        .about-list li { margin-bottom: 15px; display: flex; align-items: center; font-weight: 700; font-size: 0.95rem; }
+        .about-list li i { color: var(--mg-red); margin-right: 12px; font-size: 1.1rem; }
+
+        /* --- Team Section --- */
+        .team-section { background: var(--grey-bg); padding: 80px 5%; text-align: center; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
         .team-card {
-            background: white; padding: 30px; border-radius: 12px; text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+            background: white; padding: 35px 20px; border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05); transition: 0.3s ease;
+            display: flex; flex-direction: column; align-items: center; border-bottom: 4px solid transparent;
         }
-        .team-card:hover { transform: translateY(-10px); }
-        .team-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--mg-red); margin-bottom: 15px; }
+        .team-card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--mg-red); }
+        .team-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--mg-red); }
 
         /* --- Specs Table --- */
-        .specs-area { background: var(--mg-dark); color: white; max-width: 100%; }
-        .table-wrap { overflow-x: auto; margin-top: 20px; border-radius: 8px; }
-        table { width: 100%; border-collapse: collapse; min-width: 600px; }
-        th { background: var(--mg-red); padding: 15px; text-align: left; }
-        td { padding: 15px; border-bottom: 1px solid #333; }
+        .specs-area { background: var(--mg-dark); color: white; padding: 80px 5%; }
+        .table-wrap { overflow-x: auto; margin-top: 30px; border-radius: 8px; -webkit-overflow-scrolling: touch; }
+        table { width: 100%; border-collapse: collapse; min-width: 550px; }
+        th { background: var(--mg-red); padding: 18px; text-align: left; text-transform: uppercase; font-size: 0.9rem; }
+        td { padding: 18px; border-bottom: 1px solid #333; font-size: 0.95rem; }
 
-        /* --- Responsive Form --- */
-        .contact-section { background: var(--white); }
-        .contact-container { max-width: 600px; margin: 0 auto; background: var(--grey-bg); padding: clamp(20px, 5vw, 40px); border-radius: 15px; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
-        .form-group input, .form-group textarea { 
-            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; 
-        }
-        .submit-btn { 
-            width: 100%; background: var(--mg-red); color: white; padding: 15px; border: none; 
-            border-radius: 8px; font-weight: 800; cursor: pointer; font-size: 1rem; transition: 0.3s;
-        }
-
-        /* --- Footer --- */
-        .main-footer { background: #0a0a0a; color: #fff; padding: 60px 5% 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
-        .footer-col h4 { color: var(--mg-red); margin-bottom: 20px; font-family: 'Montserrat'; }
+        /* --- Professional Footer --- */
+        .main-footer { background: #0a0a0a; color: #ffffff; padding: 70px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: var(--mg-red); margin-bottom: 25px; text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px; }
+        .footer-col p, .footer-col ul li a { color: #bbb; font-size: 0.9rem; text-decoration: none; line-height: 1.8; transition: 0.3s; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 10px; }
-        .footer-col a { color: #bbb; text-decoration: none; font-size: 0.9rem; }
-        .footer-bottom { text-align: center; padding-top: 40px; margin-top: 40px; border-top: 1px solid #222; font-size: 0.8rem; color: #666; }
+        .footer-col ul li a:hover { color: var(--mg-red); padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 30px; text-align: center; font-size: 0.85rem; color: #666; }
 
-        /* --- Responsive Breakpoints --- */
-        @media (max-width: 992px) {
-            .grid-2 { grid-template-columns: 1fr; text-align: center; }
-            .about-content h2 { border-left: none; border-bottom: 4px solid var(--mg-red); display: inline-block; padding: 0 0 10px 0; }
-            .about-list li { justify-content: center; }
-            .slideshow-container { max-width: 400px; margin: 0 auto; }
-        }
-
-        @media (max-width: 768px) {
-            nav { padding: 0 20px; }
+        /* --- Mobile Optimization Fixes --- */
+        @media (max-width: 850px) {
             .nav-links {
                 position: absolute; top: 70px; left: -100%; width: 100%; background: white;
-                flex-direction: column; padding: 40px 20px; transition: 0.4s; height: 100vh;
+                flex-direction: column; text-align: center; padding: 30px 0;
+                transition: 0.4s ease-in-out; box-shadow: 0 10px 15px rgba(0,0,0,0.1);
             }
             .nav-links.active { left: 0; }
             .menu-toggle { display: block; }
-            .hero { min-height: 80vh; }
+            
+            .grid-2 { grid-template-columns: 1fr; text-align: center; padding: 60px 5%; }
+            .about-content h2 { border-left: none; border-bottom: 5px solid var(--mg-red); display: inline-block; padding: 0 0 12px 0; }
+            .about-list li { justify-content: center; }
+            .slideshow-container { max-width: 320px; box-shadow: 10px 10px 0px var(--mg-red); }
         }
+
+        .fade { animation: fadeEffect 1.5s; }
+        @keyframes fadeEffect { from {opacity: .5} to {opacity: 1} }
     </style>
 </head>
 <body>
@@ -128,129 +121,134 @@
         <a href="#" class="brand">MG CHEMICALS</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#specs">Specs</a></li>
-            <li><a href="#contact-us">Get Quote</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#specs">Specifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <header class="hero">
-        <div data-aos="fade-up">
-            <h1>TECHNICAL GRADE <span>UREA N46</span></h1>
-            <p>Direct Importers & Trusted Pan-India Suppliers of Premium Industrial Chemicals.</p>
-            <a href="#contact-us" style="background:var(--mg-red); color:white; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:50px; display:inline-block;">GET FREE QUOTE</a>
+        <div data-aos="zoom-in">
+            <h1>TECHNICAL GRADE <span>UREA</span></h1>
+            <p>Direct Importers and Reliable Traders. Providing Premium Quality Chemical Solutions Across All India.</p>
+            <a href="#specs" style="background:var(--mg-red); color:white; padding:15px 35px; text-decoration:none; font-weight:bold; border-radius:5px; display:inline-block; transition: 0.3s;">View Lab Report</a>
         </div>
     </header>
 
-    <section id="about" class="grid-2">
-        <div class="slideshow-container" data-aos="zoom-in">
-            <div class="mySlides fade"><img src="pic1.jpeg" alt="Urea Quality"></div>
-            <div class="mySlides fade"><img src="pic2.jpeg" alt="Stock Pile"></div>
+    <section class="grid-2" id="about">
+        <div class="slideshow-container" data-aos="fade-up">
+            <div class="mySlides fade"><img src="pic1.jpeg"></div>
+            <div class="mySlides fade"><img src="pic2.jpeg"></div>
+            <div style="position: absolute; bottom: 15px; width: 100%; text-align: center;">
+                <span class="dot" style="height: 10px; width: 10px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
+                <span class="dot" style="height: 10px; width: 10px; margin: 0 5px; background-color: #bbb; border-radius: 50%; display: inline-block;"></span>
+            </div>
         </div>
-        <div class="about-content" data-aos="fade-left">
-            <h2>WHO WE ARE</h2>
-            <p>Since 2017, MG Chemicals has been a cornerstone in the chemical trading industry. We specialize in high-purity Technical Grade Urea, serving industries across India with a focus on quality and timely delivery.</p>
+
+        <div class="about-content" data-aos="fade-up">
+            <h2>ABOUT MG CHEMICALS</h2>
+            <p>Established in 2017, we are leading direct importers of premium technical chemicals. We bridge the gap between world-class quality and your industrial requirements with transparency and trust.</p>
             <ul class="about-list">
-                <li><i class="fas fa-shield-alt"></i> 100% Purity Guaranteed</li>
-                <li><i class="fas fa-truck"></i> Fast Pan-India Logistics</li>
-                <li><i class="fas fa-handshake"></i> Direct Importer Rates</li>
+                <li><i class="fas fa-check-circle"></i> Established: 2017</li>
+                <li><i class="fas fa-check-circle"></i> Crystal Clear Quality</li>
+                <li><i class="fas fa-check-circle"></i> Pan India Delivery</li>
+                <li><i class="fas fa-check-circle"></i> Direct Importer Pricing</li>
             </ul>
         </div>
     </section>
 
     <section class="team-section">
-        <h2 class="section-title">CORE <span style="color:var(--mg-red)">LEADERSHIP</span></h2>
+        <div data-aos="fade-up">
+            <h2 style="font-family:'Montserrat'; font-size: clamp(1.8rem, 5vw, 2.5rem);">CORE <span style="color:var(--mg-red)">LEADERSHIP</span></h2>
+            <p style="margin-top:10px;">The expertise driving excellence at MG CHEMICALS.</p>
+        </div>
         <div class="team-grid">
-            <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="testi3.jpeg" class="team-img">
-                <h3>Vishal Grewal</h3>
-                <p><strong>Managing Director</strong></p>
-            </div>
-            <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="testi2.jpeg" class="team-img">
-                <h3>Anand Sindhu</h3>
-                <p><strong>Director</strong></p>
-            </div>
-            <div class="team-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="testi1.jpeg" class="team-img">
-                <h3>Suraj Kasera</h3>
-                <p><strong>CA</strong></p>
-            </div>
+            <div class="team-card"><img src="testi3.jpeg" class="team-img"><h3>Vishal Grewal</h3><span>Managing Director </span><p>The Managing Director leads MG Chemicals’ overall strategy, operations, and business growth. They drive key decisions, build strong stakeholder relationships, and ensure ethical, quality-driven expansion.</p></div>
+            
+           
+            <div class="team-card"><img src="testi2.jpeg" class="team-img"><h3>Anand Sindhu</h3><span>Director </span><p>The Director supports MG Chemicals’ strategic planning, governance, and operational oversight. They ensure compliance, risk management, and sustainable growth in coordination with senior leadership.</p></div>
+             <div class="team-card"><img src="testi1.jpeg" class="team-img"><h3>Suraj Kasera</h3><span>CA</span><p>Our Chartered Accountant manages accounting, taxation, audits, and statutory compliance, ensuring full adherence to Indian laws. They support financial planning, reporting, and regulatory coordination to maintain transparency and sustainable growth.</p></div>
+            <div class="team-card"><img src="testi4.jpeg" class="team-img"><h3>Ravi Kant Sharma</h3><span>Legal Professional</span><p>Our Legal Professional ensures legal compliance, manages contracts, statutory documentation, and mitigates legal risks to safeguard the company’s interests and support smooth business operations.</p></div>
         </div>
     </section>
 
     <section class="specs-area" id="specs">
-        <h2 class="section-title" style="color:white">TECHNICAL <span style="color:var(--mg-red)">SPECS</span></h2>
-        <div class="table-wrap" data-aos="fade-up">
-            <table>
-                <thead><tr><th>Parameter</th><th>Value</th><th>Method</th></tr></thead>
-                <tbody>
-                    <tr><td>Nitrogen</td><td>46.0% Min</td><td>ISO 5315</td></tr>
-                    <tr><td>Moisture</td><td>0.5% Max</td><td>ISO 2753</td></tr>
-                    <tr><td>Biuret</td><td>1.0% Max</td><td>ISO 2754</td></tr>
-                    <tr><td>Iron (Fe)</td><td>1.0 PPM Max</td><td>ISO 22241</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="contact-section" id="contact-us">
-        <div class="contact-container" data-aos="fade-up">
-            <h2 class="section-title" style="margin-bottom:20px">ENQUIRY <span style="color:var(--mg-red)">FORM</span></h2>
-            <form action="https://formspree.io/f/xkobqbql" method="POST">
-                <div class="form-group"><label>Full Name</label><input type="text" name="name" required></div>
-                <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
-                <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required></div>
-                <div class="form-group"><label>Message</label><textarea name="message" rows="4" required></textarea></div>
-                <button type="submit" class="submit-btn">SEND TO MG CHEMICALS</button>
-            </form>
+        <div style="max-width:1200px; margin:0 auto;">
+            <h2 style="text-align:center; font-family:'Montserrat'; margin-bottom: 40px;">TECHNICAL SPECIFICATIONS (N46)</h2>
+            
+            <div class="table-wrap" data-aos="fade-up">
+                <table>
+                    <thead><tr><th>Parameter</th><th>Value</th><th>Test Method</th></tr></thead>
+                    <tbody>
+                        <tr><td>Nitrogen Content</td><td>46% Min</td><td>ISO 5315</td></tr>
+                        <tr><td>Moisture</td><td>0.5% Max</td><td>ISO 2753</td></tr>
+                        <tr><td>Biuret Content</td><td>1.00% Max</td><td>ISO 2754</td></tr>
+                        <tr><td>Iron (Fe)</td><td>1.00 PPM Max</td><td>ISO 22241</td></tr>
+                        <tr><td>Melting Point</td><td>132°C</td><td>ISO 2759</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
     <footer class="main-footer" id="contact">
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>MG CHEMICALS</h4>
-                <p>Premium Chemical Solutions Provider Since 2017.</p>
+                <h4 style="color: white; font-weight: 800;">MG<span style="color: var(--mg-red);">CHEMICALS</span></h4>
+                <p>Direct importers and traders of premium chemicals since 2017. Committed to quality, compliance, and innovation.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#specs">Specifications</a></li>
-                    <li><a href="#contact-us">Enquiry Form</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Get In Touch</h4>
-                <p style="font-size:0.9rem; color:#bbb;">
-                    <i class="fas fa-phone"></i> +91-9253464520<br><br>
-                    <i class="fas fa-envelope"></i> MGCHEMICALS98@gmail.com
-                </p>
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope" style="color:var(--mg-red); margin-right:10px;"></i> MG CHEMICALS98@gmail.com</p>
+                <p><i class="fas fa-phone-alt" style="color:var(--mg-red); margin-right:10px;"></i> +91-9253464520</p>
+                <p><i class="fas fa-map-marker-alt" style="color:var(--mg-red); margin-right:10px;"></i> Hansi-Chandigarh Highway, Haryana</p>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2026 MG CHEMICALS. All Rights Reserved.</div>
+        <div class="footer-bottom">&copy; 2026 MG CHEMICALS. All Rights Reserved. Designed for Excellence.</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-        
-        function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
-        
-        // Auto Slideshow
-        let sIdx = 0;
-        function playSlides() {
-            let s = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < s.length; i++) s[i].style.display = "none";
-            sIdx++;
-            if (sIdx > s.length) sIdx = 1;
-            s[sIdx-1].style.display = "block";
-            setTimeout(playSlides, 3000);
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
         }
-        playSlides();
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById("navLinks").classList.remove("active");
+            });
+        });
+
+        // Slideshow Logic
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) { dots[i].style.backgroundColor = "#bbb"; }
+            if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";
+            if(dots[slideIndex-1]) dots[slideIndex-1].style.backgroundColor = "#B22222";
+            setTimeout(showSlides, 3000);
+        }
     </script>
 </body>
 </html>
